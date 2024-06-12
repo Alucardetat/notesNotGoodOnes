@@ -1,0 +1,157 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: linear-gradient(to top right, rgba(79, 51, 176, 1.0), rgba(210, 53, 165));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #aa00a4;
+    margin: 0;
+}
+
+html,
+body {
+    height: 100vh;
+}
+
+h1,
+#score {
+    color: #071115;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    align-items: stretch;
+    flex: 1;
+    background-color: #071115;
+    padding: 2vw;
+}
+
+.jeopardy-categories {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2vw;
+}
+
+.jeopardy-question {
+    flex: 1;
+    width: 100%;
+    max-width: 100%;
+    height: 10%;
+    box-sizing: border-box;
+    padding: 2vw;
+    text-align: center;
+    font-size: 1.4vw;
+    line-height: 4px;
+    background-color: #aa00a4;
+    color: #071115;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 2vw;
+}
+
+.jeopardy-question:hover,
+.jeopardy-question.selected {
+    background-color: #071115;
+    color: #aa00a4;
+    box-shadow: 0 0 2vw #aa00a4;
+}
+
+.jeopardy-question.disabled {
+    background-color: #333;
+    color: #666;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.question-panel .question-window {
+    border: 2px solid #aa00a4;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    position: relative;
+}
+
+.question-panel {
+    flex: 1;
+    padding: 2vw;
+    background-color: #071115;
+    color: #aa00a4;
+    z-index: 1000;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.question-panel p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.question-panel p:empty::before {
+    content: "Questions will appear here. Please choose a category to begin.";
+    color: #aa00a4;
+    font-style: italic;
+}
+
+.question-panel input, .question-panel button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.question-panel input {
+    background-color: #071115;
+    color: #aa00a4;
+}
+
+.question-panel button {
+    background-color: #aa00a4;
+    color: #071115;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.question-panel button:hover {
+    background-color: #071115;
+    color: #aa00a4;
+    box-shadow: 0 0 20px #aa00a4;
+}
+
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+}
+
+
+@media screen and (max-width: 600px) {
+    .jeopardy-categories,
+    .question-panel {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .jeopardy-categories {
+        flex-wrap: wrap;
+    }
+
+    [class^="jeopardy-question-"] {
+        flex: 0 0 calc(48% - 2vw);
+    }
+}

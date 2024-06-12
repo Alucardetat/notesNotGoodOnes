@@ -1,0 +1,54 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient( to top right, rgba(79,51,176,1.0),rgba(210,53,165));
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  margin: 0;
+}
+
+.app {
+  text-align: center;
+}
+
+#clear-todos {
+  background-color: #1b2f38;
+  color: #aa00a4;
+  font-size: 18px;
+  padding: 6px 12px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease;
+}
+
+#clear-todos:hover {
+  box-shadow: 0 0 20px #1b2f38;
+}
+
+.todo-input {
+  background-color: transparent;
+}
+
+.todo-input:hover {
+  box-shadow: 0 0 20px #1b2f38;
+}
+
+.add-todo {
+  background-color: #1b2f38;
+  color: #aa00a4;
+  font-size: 18px;
+  padding: 6px 12px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease;
+}
+
+.add-todo:hover {
+  box-shadow: 0 0 20px #1b2f38;
+}
+
+.complete {
+  text-decoration: line-through;
+}

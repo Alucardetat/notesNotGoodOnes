@@ -1,0 +1,104 @@
+*, *::after, *::before {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    padding: 20px;
+    background: linear-gradient(to top right, rgba(79, 51, 176, 1.0), rgba(210, 53, 165));
+    margin: 0;
+    color: #aa00a4;
+}
+
+header {
+    background: #071115;
+    color: #aa00a4;
+    padding: 10px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-btn {
+    background: #071115;
+    color: #aa00a4;
+    border: 1px solid #071115;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.header-btn:hover {
+    background: #1b2f38;
+}
+
+#stories {
+    margin-top: 20px;
+}
+
+.story {
+    background: #071115;
+    border: 1px solid #071115;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: #aa00a4;
+}
+
+.comments-section {
+    background: #071115;
+    padding: 10px;
+}
+
+.comments-btn {
+    background: #071115;
+    color: #aa00a4;
+    border: 1px solid #071115;
+    cursor: pointer;
+}
+
+.comments-btn:hover {
+    background: #1b2f38;
+}
+
+@media (max-width: 600px) {
+    /* Mobile responsive adjustments */
+    body {
+        padding: 10px;
+    }
+
+    .story {
+        margin-bottom: 5px;
+    }
+}
+
+
+/* Kept the original CSS below for reference/credit. */
+
+/* *, *::after, *::before{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    padding: 20px;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+header{
+    background-color: #f60;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+#stories{
+    margin-top: 20px;
+}
+.story{
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 600px){
+} */

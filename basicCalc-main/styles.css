@@ -1,0 +1,85 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: 0;
+  transition: all 0.5s ease;
+}
+
+body {
+  font-family: sans-serif;
+  background-image: linear-gradient( to top right, rgba(79,51,176,1.0),rgba(210,53,165));
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+}
+
+.calculator {
+  position: relative;
+  height: auto;
+  width: auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 30px #000;
+  background-color: #071115;
+}
+
+#display {
+  margin: 0 10px;
+  height: 150px;
+  width: auto;
+  max-width: 270px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: #aa00a4;
+}
+
+button {
+  height: 60px;
+  width: 60px;
+  border: 0;
+  border-radius: 30px;
+  margin: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 200ms ease;
+  background-color: #071115;
+  color: #aa00a4;
+}
+
+.clear {
+  background-color: #071115;
+  color: #aa00a4;
+}
+
+.btn-operator {
+  background-color: #071115;
+  color: #aa00a4;
+}
+
+.btn-zero {
+  background-color: #071115;
+  color: #aa00a4;
+}
+
+.btn-period {
+  background-color: #071115;
+  color: #aa00a4;
+}
+
+.equal {
+  background-color: #071115;
+  color: #aa00a4;
+}
+
+button:hover {
+  background-color: #1b2f38;
+  transform: scale(1.1);
+}

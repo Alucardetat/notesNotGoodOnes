@@ -1,0 +1,86 @@
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", Calibri, sans-serif;
+  font-size: 16px;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1; /* Place the pseudo-element behind the content */
+  background: linear-gradient(to top right, rgba(79, 51, 176, 1.0), rgba(210, 53, 165));
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.stats {
+  width: 100%; /* Take up full width */
+  margin-bottom: 2vh;
+  box-sizing: border-box;
+  padding: 1vh 0;
+  text-align: center;
+  color: #071115;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.stats h1, .stats h3 {
+  margin: 0.5vh 0;
+}
+
+#board {
+  margin: 0 auto;
+  width: 80vmin;
+  height: 80vmin;
+  border-radius: 1vmin;
+  box-shadow: 1px 1px 3px #232621;
+  background-color: #1b2f38;
+  position: relative;
+}
+
+#cleargame {
+  display: block;
+  width: 30vmin;
+  margin: 2vh auto;
+  padding: 1vmin;
+  background-color: #071115;
+  color: #aa00a4;
+  border: none;
+  border-radius: 0.5vmin;
+  cursor: pointer;
+  transition: background-color 0.15s linear;
+}
+
+#cleargame:hover {
+  background-color: #0c5a6b;
+}
+
+div#board .player1pieces .piece, div#board .player2pieces .piece {
+  position: absolute;
+  width: 8vmin;
+  height: 8vmin;
+  /* Other styles remain unchanged */
+  transition: top 0.5s, left 0.5s; /* Add this line */
+}
+
+/* You might want to add similar transitions for the 'selected' state if you want that change to be animated as well */
+div#board .player1pieces .piece.selected, div#board .player2pieces .piece.selected {
+  box-shadow: 0 0 10px 5px #16A8C7;
+  transition: box-shadow 0.5s, top 0.5s, left 0.5s; /* Add top and left transitions */
+}
+
+.piece {
+  transition: transform 0.5s ease;
+  will-change: trnasform;
+}

@@ -1,0 +1,11 @@
+{
+  "name": "js_review",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "mocha -w main.test.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,11 @@
+{
+  "name": "functionallystable",
+  "version": "1.0.0",
+  "description": "Functionally Stable",
+  "main": "main.js",
+  "scripts": {
+    "test": "mocha -w main.test.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
